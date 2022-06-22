@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--light-background: #fff;
+	--dark-background: #121212;
+	--light-foreground: #121212;
+	--dark-foreground: #fff;
+	--dark--thumb: #af3434;
+	--light-thumb: #54daad;
+	--dark-track: #656565;
+	--light-track: #cd7c7c;
+}
+
+html {
+	--background: var(--light-background);
+	--foreground: var(--light-foreground);
+	--thumb: var(--light-thumb);
+	--moz-track: auto;
+	--moz-thumb: auto;
+	--track: var(--light-track);
+}
+
+html.dark {
+	--background: var(--dark-background);
+	--foreground: var(--dark-foreground);
+	--thumb: var(--dark--thumb);
+	--track: var(--dark-track);
+	--moz-track: #19191a;
+	--moz-thumb: #666666;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.scroller {
+		/* y-mandatory means we wanted the vertical snapping of the divs or the section */
+		/* scroll-snap-type: y mandatory; */
+		/* this property is a parent/top/container level */
+		scroll-behavior: smooth;
+		scroll-padding: 50px;
+		/* scroll-behavior works smooth for the ahref tags and the top padding works if there is the heading container at the top and we need space
+		when we moved from bottom to top */
+		overflow-y: scroll;
+		scrollbar-color: var(--moz-thumb) var(--moz-track);
+	}
+}
+/* 
+div.section {
+	scroll-snap-align: end;
+	this property is child level
+} */
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--track);
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--thumb);
+	border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: yellow;
+}
+
+/*---> Scroll padding
+scroll-padding allows creating an offset at the edge of the scrollport. This is incredibly useful when you have a sticky header that would otherwise cover up headings scrolled to via in-page jump links or fragment urls.
+
+.scroll-container {
+  scroll-padding-top: var(--header-height);
+}
+
+--->Scroll behavior
+scroll-behavior lets you enable smooth scrolling, which is also super neat for in-page jump links. Don't forget to guard it in a reduced motion check for better accessibility!
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+
+---> Scroll snapping
+Introduced a while ago, CSS scroll snapping has gone through numerous improvements and patches. Today it is a fairly reliable and optimal way of building something like a gallery or stories component with near-zero JavaScript.
+
+.scroll-container {
+  scroll-snap-type: x mandatory;
+
+  & > * {
+    scroll-snap-align: start;
+  }
+}
+} */
