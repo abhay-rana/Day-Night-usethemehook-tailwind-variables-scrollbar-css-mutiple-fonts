@@ -10,3 +10,5 @@ this app will show the day and night mode according to the user(client) window p
 -   here we also used the scrollbar design according to the theme and for the chrome and mozilla firefox
 
 -   --> we can use the themeprovider context api insted of the useTheme() hook
+-   working demo video 
+https://drive.google.com/file/d/1-ZjGaRIADuqFeV1mBK-MxKhmWCRDKtKc/view
