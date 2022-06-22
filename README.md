@@ -1,4 +1,4 @@
-# Day and Night Mode, tailwind css, custom theme hook
+# Day and Night Mode, tailwind css variables, custom theme hook, Theme-ScrollBar
 
 this app will show the day and night mode according to the user(client) window preferences or the saved preferences and the scrollbar is also changing accroding to the theme 
 
