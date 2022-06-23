@@ -1,6 +1,6 @@
-# Day and Night Mode, tailwind css variables, custom theme hook, Theme-ScrollBar
+# Day and Night Mode, tailwind css variables, custom theme hook, Theme-ScrollBar, multiple fonts
 
-this app will show the day and night mode according to the user(client) window preferences or the saved preferences and the scrollbar is also changing accroding to the theme
+this app will show the day and night mode according to the user(client) window preferences or the saved preferences and the scrollbar is also changing accroding to the theme , multiple custom font-family defined in the tailwind
 
 ## Features / About
 
@@ -10,8 +10,9 @@ this app will show the day and night mode according to the user(client) window p
     --> firstly we check the theme from the user saved preferences(browser local storage) and if there is nothing there means the user comes first time to the website so we check from the windows preferences if we didnt get the dark theme from there so we reflect the light them to the user as a default theme
 
 -   here we used of the smooth scrolling also of the <ahref/> tags so it will move to the specific position with the help of css property and the scroll-padding property to give the top padding for the header if there is any fixed header in the website
+-   
 -   here we also used the scrollbar design according to the theme and for the chrome and mozilla firefox
-
+-   multiple custom family used , for the heading there is another font family and for the text there is another font family 
 -   --> we can use the themeprovider context api insted of the useTheme() hook
 -   working demo video
     https://drive.google.com/file/d/1-ZjGaRIADuqFeV1mBK-MxKhmWCRDKtKc/view
