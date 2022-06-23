@@ -30,20 +30,32 @@ html.dark {
 	--moz-track: #19191a;
 	--moz-thumb: #666666;
 }
+/* apply custom font to the full app */
+@layer base {
+	body {
+		@apply font-custom;
+	}
+	h1 {
+		@apply font-heading;
+	}
+}
+
+/* by using the @apply you can use the css you have defined in the tailwind.config.js */
 
 @media (prefers-reduced-motion: no-preference) {
-	.scroller {
+	html {
 		/* y-mandatory means we wanted the vertical snapping of the divs or the section */
 		/* scroll-snap-type: y mandatory; */
 		/* this property is a parent/top/container level */
 		scroll-behavior: smooth;
-		scroll-padding: 50px;
+		scroll-padding-top: 500px;
 		/* scroll-behavior works smooth for the ahref tags and the top padding works if there is the heading container at the top and we need space
 		when we moved from bottom to top */
 		overflow-y: scroll;
 		scrollbar-color: var(--moz-thumb) var(--moz-track);
 	}
 }
+
 /* 
 div.section {
 	scroll-snap-align: end;

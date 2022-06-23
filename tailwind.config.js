@@ -1,9 +1,10 @@
 module.exports = {
-	content: ["./src/**/*.{html,js}", "./public/index.html"],
+	content: ["./src/**/*.{html,js}"],
 	darkMode: "class",
 	theme: {
 		fontFamily: {
-			custom: "Roboto",
+			custom: ["Roboto", "sans-sarif"],
+			heading: ["Oswald", "sans-serif"],
 		},
 		extend: {
 			colors: {

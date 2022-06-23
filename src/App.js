@@ -9,9 +9,9 @@ const App = () => {
 
 	return (
 		<>
-			<header className="p-8" id="header">
+			<header className="">
 				This is header
-				<div>current theme is :{theme}</div>
+				<h1>current theme is :{theme}</h1>
 				<button onClick={toggleTheme}>Toggle Theme</button>
 			</header>
 			<Section className="section bg-red-400 bg-custom-background text-custom-foreground" />
